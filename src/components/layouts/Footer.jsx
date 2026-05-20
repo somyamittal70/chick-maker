@@ -14,13 +14,11 @@ const Footer = () => {
           <div>
             <a href="#home" className="flex items-center gap-3">
               <div className="hidden sm:block">
-                <h1 className="text-[#eda126] font-bold text-3xl leading-none">
-                  Chick Parda
-                </h1>
-
-                <p className="text-gray-300 text-xs tracking-widest uppercase">
-                  Bamboo Solutions
-                </p>
+                <img
+                  src={logo}
+                  alt="logo"
+                  className="h-18 w-auto object-contain transition-all duration-300"
+                />
               </div>
             </a>
 
