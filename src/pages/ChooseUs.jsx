@@ -17,6 +17,22 @@ const features = [
     title: "Quality Material",
     desc: "We use durable and long-lasting fabrics for better results.",
   },
+  {
+    title: "Excellent Support",
+    desc: "Our team is always ready to assist you with any queries.",
+  },
+  {
+    title: "Eco-Friendly",
+    desc: "Our products are made with sustainable materials for a greener planet.",
+  },
+  {
+    title: "Satisfaction Guarantee",
+    desc: "We are committed to your satisfaction and will ensure you are happy with our service.",
+  },
+  {
+    title: "Wide Variety",
+    desc: "Choose from a wide range of styles, colors, and fabrics to suit your taste.",
+  }
 ];
 
 const ChooseUs = () => {
