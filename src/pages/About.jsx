@@ -4,7 +4,7 @@ import aboutImg from "../assets/images/about.jpg";
 
 const About = () => {
   return (
-    <section id="about" className="w-full py-10 bg-[#f8f5ef]">
+    <section id="about" className="w-full py-20 bg-[#f8f5ef]">
       {/*Divider */}
       <div className="w-full h-[1px] bg-gray-300 mb-10" />
 

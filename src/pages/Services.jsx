@@ -38,7 +38,10 @@ const servicesData = [
 
 const Services = () => {
   return (
-    <section id="services" className="w-full py-10 bg-[#f8f5ef]">
+    <section
+      id="services"
+      className="w-full py-20 bg-[#f8f5ef] overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Heading */}
@@ -47,8 +50,10 @@ const Services = () => {
             Our <span className="text-[#eda126]">Services</span>
           </h1>
 
-          <p className="mt-5 text-gray-600 max-w-2xl mx-auto text-lg">
-            We provide premium bamboo chick manufacturing, custom design, installation, and maintenance services for homes, offices, cafés, balconies, and outdoor spaces.
+          <p className="mt-5 text-gray-600 max-w-2xl mx-auto text-lg leading-8">
+            We provide premium bamboo chick manufacturing, custom design,
+            installation, and maintenance services for homes, offices, cafés,
+            balconies, and outdoor spaces.
           </p>
         </div>
 
@@ -57,15 +62,17 @@ const Services = () => {
           {servicesData.map((service) => (
             <div
               key={service.id}
-              className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 group"
+              className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 group transform hover:-translate-y-1"
             >
               
               {/* Image */}
-              <div className="overflow-hidden">
+              <div className="overflow-hidden rounded-t-2xl">
                 <img
+                  loading="lazy"
+                  decoding="async"
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-64 object-cover group-hover:scale-110 transition duration-500"
+                  className="w-full h-64 object-cover transform transition-transform duration-300 ease-in-out group-hover:scale-105 will-change-transform"
                 />
               </div>
 

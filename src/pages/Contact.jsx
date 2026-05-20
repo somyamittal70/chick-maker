@@ -2,7 +2,7 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <section id="contact" className="w-full py-10 bg-[#f8f5ef]">
+    <section id="contact" className="w-full py-20 bg-[#f8f5ef]">
 
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
@@ -116,7 +116,6 @@ const Contact = () => {
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
-                loading="lazy"
               ></iframe>
             </div>
           </div>

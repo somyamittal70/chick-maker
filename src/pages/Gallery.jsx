@@ -13,32 +13,42 @@ const Gallery = () => {
   const images = [img1, img2, img3, img4, img5, img6];
 
   return (
-    <div id="gallery" className="w-full py-10 bg-[#f8f5ef]">
-        
+    <section
+      id="gallery"
+      className="w-full py-20 bg-[#f8f5ef] overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto px-6">
-        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-14 text-center">
-          Our <span className="text-[#eda126]">Gallery</span>
-        </h1>
+        
+        {/* Heading */}
+        <div className="text-center mb-14">
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900">
+            Our <span className="text-[#eda126]">Gallery</span>
+          </h1>
 
-        <p className="text-gray-600 text-lg max-w-2xl mx-auto mb-10 text-center">
-          Explore our gallery to discover beautifully crafted Chick Parda
-          designs that blend natural elegance, durability, and modern style for
-          every space.
-        </p>
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto mt-5 leading-8">
+            Explore our gallery to discover beautifully crafted Chick Parda
+            designs that blend natural elegance, durability, and modern style
+            for every space.
+          </p>
+        </div>
 
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {images.map((img, index) => (
             <div
               key={index}
-              className="overflow-hidden rounded-2xl shadow-lg cursor-pointer"
               onClick={() => setSelectedImage(img)}
+              className="overflow-hidden rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer group"
             >
-              <img
-                src={img}
-                alt={`Gallery Item ${index + 1}`}
-                className="w-full h-64 object-cover hover:scale-110 transition duration-500"
-              />
+              <div className="overflow-hidden rounded-2xl">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src={img}
+                  alt={`Gallery Item ${index + 1}`}
+                  className="w-full h-72 object-cover transform transition-transform duration-300 ease-in-out group-hover:scale-105 will-change-transform"
+                />
+              </div>
             </div>
           ))}
         </div>
@@ -47,25 +57,29 @@ const Gallery = () => {
       {/* Modal */}
       {selectedImage && (
         <div
-          className="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
+          className="fixed inset-0 bg-black/90 backdrop-blur-sm flex items-center justify-center z-50 p-4"
           onClick={() => setSelectedImage(null)}
         >
-          <img
-            src={selectedImage}
-            alt="Selected"
-            className="max-w-[90%] max-h-[90%] rounded-xl shadow-2xl"
-          />
+          <div className="relative">
+            <img
+              loading="eager"
+              decoding="async"
+              src={selectedImage}
+              alt="Selected"
+              className="max-w-full md:max-w-5xl max-h-[90vh] rounded-2xl shadow-xl object-contain"
+            />
 
-          {/* Close Button */}
-          <button
-            className="absolute top-5 right-5 text-white text-4xl font-bold"
-            onClick={() => setSelectedImage(null)}
-          >
-            ×
-          </button>
+            {/* Close Button */}
+            <button
+              className="absolute -top-4 -right-4 bg-white text-black w-10 h-10 rounded-full text-2xl font-bold shadow-lg hover:bg-gray-200 transition"
+              onClick={() => setSelectedImage(null)}
+            >
+              ×
+            </button>
+          </div>
         </div>
       )}
-    </div>
+    </section>
   );
 };
 
