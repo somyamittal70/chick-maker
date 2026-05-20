@@ -5,8 +5,6 @@ import aboutImg from "../assets/images/about.jpg";
 const About = () => {
   return (
     <section id="about" className="w-full py-20 bg-[#f8f5ef]">
-      {/*Divider */}
-      <div className="w-full h-[1px] bg-gray-300 mb-10" />
 
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* Image Section */}

@@ -6,6 +6,7 @@ import Footer from './components/layouts/Footer'
 import { Link } from 'lucide-react'
 import About from './pages/About'
 import Services from './pages/Services'
+import ChooseUs from './pages/ChooseUs'
 import Gallery from './pages/Gallery'
 import Contact from './pages/Contact'
 
@@ -18,6 +19,7 @@ function App() {
       <Home />
       <About />
       <Services />
+      <ChooseUs />
       <Gallery />
       <Contact />
       <Footer />
