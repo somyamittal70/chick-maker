@@ -9,6 +9,7 @@ import Services from './pages/Services'
 import ChooseUs from './pages/ChooseUs'
 import Gallery from './pages/Gallery'
 import Contact from './pages/Contact'
+import CTA from './pages/CTA'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,6 +21,7 @@ function App() {
       <About />
       <Services />
       <ChooseUs />
+      < CTA />
       <Gallery />
       <Contact />
       <Footer />
