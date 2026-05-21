@@ -36,7 +36,7 @@ const CTA = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mt-10">
               {/* Call Button */}
               <a
-                href="#contact"
+                href="tel:+919012139173"
                 className="group flex items-center gap-3 px-8 py-4 bg-[#1f1f1f] text-white rounded-full font-semibold text-lg hover:scale-105 transition duration-300 shadow-xl"
               >
                 <Phone

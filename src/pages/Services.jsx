@@ -101,11 +101,6 @@ const Services = () => {
 
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-60"></div>
-
-                {/* Floating Icon */}
-                <div className="absolute top-5 right-5 w-12 h-12 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center shadow-lg group-hover:rotate-45 transition duration-500">
-                  <ArrowUpRight className="text-[#8a5708]" size={22} />
-                </div>
               </div>
 
               {/* Content */}

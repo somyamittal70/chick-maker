@@ -34,11 +34,9 @@ const Header = () => {
       className="fixed top-0 left-0 w-full z-50 px-4 md:px-6 py-4"
     >
       <div
-        className={`max-w-7xl mx-auto transition-all duration-500 ${
-          scrolled
-            ? "bg-white/80 backdrop-blur-2xl shadow-[0_10px_40px_rgba(0,0,0,0.08)] border border-white/40"
-            : "bg-white/25 backdrop-blur-2xl border border-white/20 shadow-[0_8px_30px_rgba(0,0,0,0.08)]"
-        } rounded-2xl`}
+        className={`max-w-7xl mx-auto transition-all duration-500 
+        bg-white/70 backdrop-blur-xl border border-white/40 
+        shadow-[0_10px_40px_rgba(0,0,0,0.08)] rounded-2xl`}
       >
         <div className="flex items-center justify-between px-5 md:px-8 py-4">
           {/* Logo */}
@@ -46,7 +44,7 @@ const Header = () => {
             <img
               src={logo}
               alt="logo"
-              className="h-14 md:h-16 w-auto object-contain"
+              className="h-11 md:h-13 lg:h-15 w-auto object-contain scale-110"
             />
           </a>
 
@@ -56,9 +54,7 @@ const Header = () => {
               <a
                 key={index}
                 href={item.link}
-                className={`group relative text-sm font-semibold tracking-[1px] transition duration-300 hover:text-[#eda126] ${
-                  scrolled ? "text-gray-800" : "text-white"
-                }`}
+                className="group relative text-sm font-semibold tracking-[1px] text-black transition duration-300 hover:text-[#eda126]"
               >
                 {item.name}
 
@@ -99,13 +95,13 @@ const Header = () => {
               transition={{ duration: 0.3 }}
               className="lg:hidden px-5 pb-5"
             >
-              <div className="bg-black/95 backdrop-blur-2xl rounded-3xl py-8 px-6 flex flex-col items-center gap-7 shadow-2xl border border-white/10">
+              <div className="bg-white/90 backdrop-blur-xl rounded-3xl py-8 px-6 flex flex-col items-center gap-7 shadow-2xl border border-gray-200">
                 {navItems.map((item, index) => (
                   <a
                     key={index}
                     href={item.link}
                     onClick={() => setMobileOpen(false)}
-                    className="text-white text-lg font-semibold hover:text-[#eda126] transition duration-300"
+                    className="text-black text-lg font-semibold hover:text-[#eda126] transition duration-300"
                   >
                     {item.name}
                   </a>

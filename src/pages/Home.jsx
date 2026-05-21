@@ -17,7 +17,7 @@ const Home = () => {
         className="absolute inset-0 w-full h-full object-cover"
       />
       {/* Premium Overlay */}
-      <div className="absolute inset-0 bg-black/55"></div>
+      <div className="absolute inset-0 bg-black/45"></div>
       {/* Gradient Glow */}
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black/60 via-black/20 to-black/50"></div>
       Decorative Blur
